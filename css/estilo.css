@@ -1,0 +1,270 @@
+:root{
+    --verde-claro: #CEEAD6;
+    --vermelho-claro: #FEDFC8;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main { /* usado para fixar o rodapé no final da página */
+    flex: 1;
+    padding: 20px;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;    
+}
+
+h1{
+    /* font-family: 'Sedgwick Ave Display', cursive; */
+    font-weight: lighter;
+    font-size: 40px;
+    background-color: #d3d3d3;
+    height: 100px; /* altura da tag */
+    display: flex; /* habilita novos recursos */
+    justify-content: center; /* alinhamento na horizontal */
+    align-items: center;  /* alinhamento na vertical */
+}
+
+/* TABELA */
+table{
+    width: 100%;
+    border: 2px solid #777;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+th{
+    height: 64px;
+}
+
+tr{
+    height: 40px;
+}
+
+tr, th, td{ /* configurando a cor das bordas internas */
+    border: 1px solid #aaa;
+}
+
+th, td{ /* configurando o espaço interno da th e td*/
+    padding: 3px;    
+}
+
+thead{ /* configurando o cabeçalho da tabela */
+    background-color: #777;
+    color: white;
+}
+
+tbody > tr:hover{ /* todos os filhos de tbody que o mouse estiver sobre 
+                     o tr muda cor */
+    background-color: #eee;    
+}
+
+/* 
+tbody > tr:hover td:nth-child(4){
+    background-color: green;   
+}
+
+tbody > tr:hover td:nth-child(5){
+    background-color: red;   
+} 
+*/
+
+
+td > img{
+    padding-top: 5px;
+}
+
+/* FIM TABELA */
+
+.row{
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.col1{ width: 10%; float: left; }
+.col2{ width: 20%; float: left; }
+.col3{ width: 30%; float: left; }
+.col4{ width: 40%; float: left; }
+.col5{ width: 50%; float: left; }
+.col6{ width: 60%; float: left; }
+.col7{ width: 70%; float: left; }
+.col8{ width: 80%; float: left; }
+.col9{ width: 90%; float: left; }
+.col10{ width: 100%; float: left; }
+
+
+.row-fluid{
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.col{
+    width: 100%;
+}
+
+/* INPUTs */
+input[type=text], 
+input[type=email],
+input[type=tel],
+input[type=password]{
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    height: 45px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+input[type=submit]{
+    background-color: #4169E1;
+    color: white;
+    padding: 10px 30px;
+    border: 1px solid #2eb2ff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type=submit]:hover{
+    background-color: #1d44b8
+}
+
+input[type=reset]{
+    background-color: #2eb2ff;
+    color: white;
+    padding: 10px 30px;
+    border: 1px solid #4169E1;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type=reset]:hover{
+    background-color: #777;
+}
+
+label{
+    font-weight: 500;
+    cursor: pointer;
+    color: #777;    
+    margin-top: 10px;
+}
+
+select{    
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    height: 45px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+.justify-center{ /* centraliza na horizontal */
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.justify-right{ /* alinha na horizontal direita */
+    display: flex;
+    justify-content: right;
+}
+
+.align-center{ /* centraliza na vertical */
+    display: flex;
+    align-items: center;
+}
+
+/* MENU */
+.menu{
+    background-color: #777;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu ul{
+    display: flex;  
+    justify-content: end; /* menu para direita na horizontal */
+    align-items: center; /* alinhamento na vertical */
+    height: 60px;
+    color: white;
+}
+
+.menu ul li{
+    list-style-type: none;
+    padding: 10px 30px;    
+    transition: 1s;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu ul li:hover{
+    background-color: #4169E1;
+    color: #4169e1;        
+}
+
+.itens{
+    display: flex;
+}
+
+.itens p{
+    display: flex;
+    align-items: center;
+    color: #ccc;
+}
+/* FIM MENU */
+
+.space10v{  /* espaço na vertival */
+    height: 10px;
+}
+
+.space10h{ /* espaço na horizontal */
+    width: 10px;
+}
+
+.rodape{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 50px;
+    font-weight: bold;
+}
+
+/* Cores da tabela */
+.verde-claro{
+    background-color: var(--verde-claro);
+}
+
+.vermelho-claro{
+    background-color: var(--vermelho-claro);
+}
+
+.senha-erro{
+    display: none;
+    color: red;
+}
